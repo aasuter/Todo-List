@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Calander</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <div class="form">
+    <form action="http://localhost:3000/" method="POST">
+      <a class="button" target="_blank" rel="noopener noreferrer" href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=1075538494185-6og9vl2bhmc61i3q2t831u7k069h7ek7.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&flowName=GeneralOAuthFlow">Sign In</a>
+       <span>You need to Sign In first</span><br><br>
+      <label for="token">Paste the copied token here</label>
+      <input name="token" type="text" placeholder="must be like this Jw65AJg05xiOGmkCld...">
+      <input type="submit" value="Get my events"></input>
+    </form>
+    <hr>
+    <form action="http://localhost:3000/events" method="POST">
+      <label for="attendee email">Attendee email</label>
+      <input type="email" name="to" placeholder="send email to...">
+      <label for="event title">Event Title</label>
+      <input type="text" name="summary" placeholder="the title of event...">
+      <label for="body">Event body</label>
+      <input type="text" name="description" placeholder="the message body...">
+      <input type="submit" value="Send Event Invite">
+    </form>
+  </div>
+</body>
+</html>
